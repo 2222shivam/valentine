@@ -239,12 +239,13 @@ elif st.session_state.page == 5:
 
     message = """
 🌷 You thought this was just a small quiz…  
-
 But every answer led to you 💕  
 
-✨ You make ordinary days special  
-🌸 You bring calm into chaos  
-💫 And unknowingly became my favorite person  
+❤️ I love everything about you Shraddhu My wife My Lady❤️
+✨ You are more beautiful than ever
+🌸 We are Decade blessed and more to come
+
+
 
 ❤️ Happy Valentine's Day ❤️
 """
@@ -256,3 +257,4 @@ But every answer led to you 💕
         text += char
         box.markdown(f"<div class='love-box'>{text}</div>", unsafe_allow_html=True)
         time.sleep(0.03)
+
