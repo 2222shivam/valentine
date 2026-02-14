@@ -1,0 +1,29 @@
+<style>
+    body {
+      margin:0;
+      overflow:hidden;
+    }
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: float 6s linear infinite;
+      color: #ff4b6e;
+    }
+    @keyframes float {
+      0% {transform: translateY(0);}
+      100% {transform: translateY(-110vh);}
+    }
+    </style>
+    
+    <script>
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className="heart";
+      heart.style.left=Math.random()*100+"vw";
+      heart.innerHTML="❤️";
+      document.body.appendChild(heart);
+      setTimeout(()=>heart.remove(),6000);
+    },800);
+    </script>
+    
