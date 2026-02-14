@@ -3,6 +3,9 @@ import time
 import base64
 import os
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
     page_title="For Someone Special ❤️",
@@ -79,6 +82,7 @@ box-shadow:0 6px 18px rgba(255,75,110,0.35);
 
 # ---------------- FLOATING HEARTS ----------------
 if os.path.exists("assets/hearts.html"):
+    hearts_path = os.path.join(BASE_DIR, "assets", "hearts.html")
     with open("assets/hearts.html", encoding="utf-8") as f:
         st.components.v1.html(f.read(), height=0)
 
@@ -212,7 +216,10 @@ elif st.session_state.page == 5:
 
     st.markdown("<div class='title'>💖 Happy Valentine's Day 💖</div>", unsafe_allow_html=True)
 
-    with open("assets/her_photo.jpg","rb") as img:
+    image_path = os.path.join(BASE_DIR, "assets", "her_photo.jpg")
+
+    with open(image_path, "rb") as img:
+
         img_base64 = base64.b64encode(img.read()).decode()
 
     st.markdown(f"""
@@ -246,3 +253,4 @@ But every answer led to you 💕
         text += char
         box.markdown(f"<div class='love-box'>{text}</div>", unsafe_allow_html=True)
         time.sleep(0.03)
+
