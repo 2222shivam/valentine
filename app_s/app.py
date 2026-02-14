@@ -241,7 +241,7 @@ elif st.session_state.page == 5:
 🌷 You thought this was just a small quiz…  
 💕 But every answer led to you   
 
-❤️ I love you Shraddhu❤️
+❤️ I love you Shraddhu
 ✨ You are more beautiful than ever
 🌸 We are Decade blessed and more to come
 
@@ -257,6 +257,7 @@ elif st.session_state.page == 5:
         text += char
         box.markdown(f"<div class='love-box'>{text}</div>", unsafe_allow_html=True)
         time.sleep(0.03)
+
 
 
 
